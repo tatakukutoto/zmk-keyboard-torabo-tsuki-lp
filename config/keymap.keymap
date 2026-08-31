@@ -13,6 +13,18 @@
             key-positions = <28 29>;
             layers = <2>;
         };
+
+        lclk {
+            bindings = <&mkp LCLK>;
+            key-positions = <33 34>;
+            layers = <0>;
+        };
+
+        rclk {
+            bindings = <&mkp RCLK>;
+            key-positions = <34 35>;
+            layers = <0>;
+        };
     };
 
     keymap {
