@@ -16,7 +16,7 @@
 
         c_rclk {
             bindings = <&mkp RCLK>;
-            key-positions = <17 18>;
+            key-positions = <18 19>;
             layers = <0>;
             timeout-ms = <200>;
         };
@@ -30,7 +30,7 @@
 
         c_scroll {
             bindings = <&mo 5>;
-            key-positions = <18 19>;
+            key-positions = <18 17>;
             timeout-ms = <200>;
         };
     };
