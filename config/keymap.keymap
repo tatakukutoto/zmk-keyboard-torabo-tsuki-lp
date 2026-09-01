@@ -27,6 +27,18 @@
             timeout-ms = <200>;
             layers = <0>;
         };
+
+        c_- {
+            bindings = <&kp MINUS>;
+            key-positions = <18 19>;
+            timeout-ms = <200>;
+        };
+
+        c_Ro {
+            bindings = <&kp INT_RO>;
+            key-positions = <30 31>;
+            timeout-ms = <200>;
+        };
     };
 
     macros {
@@ -68,7 +80,7 @@
         layer_0 {
             bindings = <
 &kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &kp K      &kp L     &kp MINUS
+&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &kp K      &kp L     &kp SEMICOLON
 &kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
 &mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 3 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 2 ENTER  &lt 1 TAB  &none  &none      &kp BSPC  &kp DEL
             >;
@@ -76,19 +88,19 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RIGHT_BRACKET  &kp EQUAL      &kp INT_YEN
-&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans             &kp SEMICOLON  &kp SQT
-&trans  &trans  &trans  &trans  &trans  &kp RBKT      &kp BSLH  &trans  &trans  &trans             &trans         &kp INT_RO
-&trans  &trans  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans             &trans         &trans
+&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &kp RIGHT_BRACKET  &kp EQUAL  &kp INT_YEN
+&trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans             &trans     &kp SQT
+&trans  &trans  &trans  &trans  &trans  &kp RBKT      &kp BSLH  &trans  &trans  &trans             &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans        &trans    &trans  &trans  &trans             &trans     &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&kp N1             &kp N2     &kp N3       &kp N4     &kp N5                             &kp N6  &kp N7     &kp N8     &kp N9     &kp N0
-&kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans
-&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans  &trans     &trans     &trans     &trans
-&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans  &trans     &trans     &trans     &trans
+&kp N1             &kp N2     &kp N3       &kp N4     &kp N5                             &kp N6  &kp N7  &kp N8  &kp N9  &kp N0
+&kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &trans  &trans  &trans  &trans  &trans
+&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
