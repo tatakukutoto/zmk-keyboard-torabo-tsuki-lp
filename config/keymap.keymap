@@ -10,14 +10,14 @@
         c_lclk {
             bindings = <&mkp LCLK>;
             key-positions = <16 17>;
-            layers = <0>;
+            layers = <0 7>;
             timeout-ms = <200>;
         };
 
         c_rclk {
             bindings = <&mkp RCLK>;
             key-positions = <18 17>;
-            layers = <0>;
+            layers = <0 7>;
             timeout-ms = <200>;
         };
 
@@ -25,14 +25,14 @@
             bindings = <&mkp MCLK>;
             key-positions = <16 17 18>;
             timeout-ms = <200>;
-            layers = <0>;
+            layers = <0 7>;
         };
 
         c_Ro {
             bindings = <&kp INT_RO>;
             key-positions = <31 30>;
             timeout-ms = <200>;
-            layers = <0>;
+            layers = <0 7>;
         };
     };
 
@@ -107,7 +107,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        mac_base {
+        base {
             bindings = <
 &kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
 &kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 6 K    &lt 5 L   &kp MINUS
@@ -134,7 +134,7 @@
             >;
         };
 
-        mac_macro {
+        macro {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
 &trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
