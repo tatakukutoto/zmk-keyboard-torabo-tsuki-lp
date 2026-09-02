@@ -64,7 +64,7 @@
         macro_9981: macro_9981 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1>;
+            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1>;
             label = "MACRO_9981";
         };
 
@@ -82,64 +82,25 @@
             label = "BT1";
         };
 
-        mission_control: mission_control {
+        bt2: bt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp UP_ARROW>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp UP_ARROW>;
-
-            label = "MISSION_CONTROL";
+            bindings = <&bt BT_SEL 2 &to 7>;
+            label = "BT2";
         };
 
-        left_space: left_space {
+        bt3: bt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT>;
-
-            label = "LEFT_SPACE";
+            bindings = <&bt BT_SEL 3 &to 7>;
+            label = "BT3";
         };
 
-        right_space: right_space {
+        bt4: bt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp RIGHT>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp RIGHT>;
-
-            label = "RIGHT_SPACE";
-        };
-
-        wintab: wintab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp TAB>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp TAB>;
-
-            label = "WINTAB";
-        };
-
-        alttab: alttab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_ALT &kp TAB>,
-                <&macro_release>,
-                <&kp LEFT_ALT &kp TAB>;
-
-            label = "ALTTAB";
+            bindings = <&bt BT_SEL 4 &to 7>;
+            label = "BT4";
         };
     };
 
@@ -175,19 +136,19 @@
 
         mac_macro {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans       &trans            &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans                      &left_space  &mission_control  &right_space  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans            &trans        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans            &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)        &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans              &trans            &trans         &trans
             >;
         };
 
         bt_sel {
             bindings = <
-&bt0    &bt1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &bt BT_CLR    &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&bt0    &bt1    &bt2    &bt3        &bt4                                &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -220,10 +181,10 @@
 
         win_macro {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                              &trans  &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &alttab    &trans                              &trans  &wintab  &trans  &trans  &trans
-&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &trans  &trans   &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
+&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(TAB)         &kp LA(TAB)       &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
+&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &trans              &trans            &trans             &trans
             >;
         };
     };
