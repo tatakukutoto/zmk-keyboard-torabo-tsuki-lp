@@ -64,15 +64,89 @@
         macro_9981: macro_9981 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N9 &kp N9 &kp N8 &kp N1>;
+            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1>;
             label = "MACRO_9981";
+        };
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "BT0";
+        };
+
+        bt1: bt1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 7>;
+            label = "BT1";
+        };
+
+        mission_control: mission_control {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp UP_ARROW>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp UP_ARROW>;
+
+            label = "MISSION_CONTROL";
+        };
+
+        left_space: left_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp LEFT>;
+
+            label = "LEFT_SPACE";
+        };
+
+        right_space: right_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_CONTROL &kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_CONTROL &kp RIGHT>;
+
+            label = "RIGHT_SPACE";
+        };
+
+        wintab: wintab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_GUI &kp TAB>;
+
+            label = "WINTAB";
+        };
+
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &kp TAB>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp TAB>;
+
+            label = "ALTTAB";
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        layer_0 {
+        mac_base {
             bindings = <
 &kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
 &kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 6 K    &lt 5 L   &kp MINUS
@@ -81,7 +155,7 @@
             >;
         };
 
-        layer_1 {
+        sign {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                          &trans            &trans            &kp LEFT_BRACKET  &kp EQUAL      &kp INT_YEN
 &trans  &trans  &trans  &trans  &trans                          &trans            &kp LS(N7)        &kp LS(NUMBER_2)  &kp SEMICOLON  &kp SQT
@@ -90,7 +164,7 @@
             >;
         };
 
-        layer_2 {
+        num {
             bindings = <
 &kp N1             &kp N2     &kp N3       &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8        &kp N9     &kp N0
 &kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F2
@@ -99,21 +173,21 @@
             >;
         };
 
-        layer_3 {
+        mac_macro {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans                              &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans       &trans            &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &left_space  &mission_control  &right_space  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans            &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans            &trans        &trans  &trans
             >;
         };
 
-        layer_4 {
+        bt_sel {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &bt BT_CLR    &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&bt0    &bt1    &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                        &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &bt BT_CLR    &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -132,6 +206,24 @@
 &none  &none  &none  &none  &none                    &none  &mkp LCLK  &none  &mkp RCLK  &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none      &none  &none      &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none      &none  &none      &none
+            >;
+        };
+
+        win_base {
+            bindings = <
+&kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
+&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 6 K    &lt 5 L   &kp MINUS
+&kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 8 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 2 ENTER  &lt 1 TAB  &none  &none      &kp BSPC  &kp DEL
+            >;
+        };
+
+        win_macro {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans                              &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &alttab    &trans                              &trans  &wintab  &trans  &trans  &trans
+&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &trans  &trans   &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans  &trans   &trans  &trans  &trans
             >;
         };
     };
