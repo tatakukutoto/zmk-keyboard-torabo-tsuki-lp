@@ -83,10 +83,10 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                          &trans            &trans            &kp RIGHT_BRACKET  &kp EQUAL      &kp INT_YEN
-&trans  &trans  &trans  &trans  &trans                          &trans            &kp LS(N7)        &kp LS(NUMBER_2)   &kp SEMICOLON  &kp SQT
-&trans  &trans  &trans  &trans  &trans  &kp RBKT      &kp BSLH  &kp LS(NUMBER_1)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)   &kp LS(N5)     &kp LS(NUMBER_6)
-&trans  &trans  &trans  &trans  &trans  &trans        &trans    &trans            &trans            &trans             &trans         &trans
+&trans  &trans  &trans  &trans  &trans                          &trans            &trans            &kp LEFT_BRACKET  &kp EQUAL      &kp INT_YEN
+&trans  &trans  &trans  &trans  &trans                          &trans            &kp LS(N7)        &kp LS(NUMBER_2)  &kp SEMICOLON  &kp SQT
+&trans  &trans  &trans  &trans  &trans  &kp RBKT      &kp BSLH  &kp LS(NUMBER_1)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)     &kp LS(NUMBER_6)
+&trans  &trans  &trans  &trans  &trans  &trans        &trans    &trans            &trans            &trans            &trans         &trans
             >;
         };
 
