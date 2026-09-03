@@ -10,14 +10,14 @@
         c_lclk {
             bindings = <&mkp LCLK>;
             key-positions = <16 17>;
-            layers = <0 7>;
+            layers = <0 1>;
             timeout-ms = <200>;
         };
 
         c_rclk {
             bindings = <&mkp RCLK>;
             key-positions = <18 17>;
-            layers = <0 7>;
+            layers = <0 1>;
             timeout-ms = <200>;
         };
 
@@ -25,14 +25,14 @@
             bindings = <&mkp MCLK>;
             key-positions = <16 17 18>;
             timeout-ms = <200>;
-            layers = <0 7>;
+            layers = <0 1>;
         };
 
         c_Ro {
             bindings = <&kp INT_RO>;
             key-positions = <31 30>;
             timeout-ms = <200>;
-            layers = <0 7>;
+            layers = <0 1>;
         };
     };
 
@@ -78,28 +78,28 @@
         bt1: bt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 7>;
+            bindings = <&bt BT_SEL 1 &to 1>;
             label = "BT1";
         };
 
         bt2: bt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 7>;
+            bindings = <&bt BT_SEL 2 &to 1>;
             label = "BT2";
         };
 
         bt3: bt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &to 7>;
+            bindings = <&bt BT_SEL 3 &to 1>;
             label = "BT3";
         };
 
         bt4: bt4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &to 7>;
+            bindings = <&bt BT_SEL 4 &to 1>;
             label = "BT4";
         };
     };
@@ -110,9 +110,18 @@
         base {
             bindings = <
 &kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 6 K    &lt 5 L   &kp MINUS
+&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 8 K    &lt 7 L   &kp MINUS
 &kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 3 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 2 ENTER  &lt 1 TAB  &none  &none      &kp BSPC  &kp DEL
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 4 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BSPC  &kp DEL
+            >;
+        };
+
+        win_base {
+            bindings = <
+&kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
+&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 8 K    &lt 7 L   &kp MINUS
+&kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 5 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BSPC  &kp DEL
             >;
         };
 
@@ -143,6 +152,15 @@
             >;
         };
 
+        win_macro {
+            bindings = <
+&trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
+&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(TAB)         &kp LA(TAB)       &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
+&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &trans              &trans            &trans             &trans
+            >;
+        };
+
         bt_sel {
             bindings = <
 &bt0    &bt1    &bt2    &bt3        &bt4                                &trans  &trans  &trans  &trans  &trans
@@ -167,24 +185,6 @@
 &none  &none  &none  &none  &none                    &none  &mkp LCLK  &none  &mkp RCLK  &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none      &none  &none      &none
 &none  &none  &none  &none  &none  &none      &none  &none  &none      &none  &none      &none
-            >;
-        };
-
-        win_base {
-            bindings = <
-&kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 6 K    &lt 5 L   &kp MINUS
-&kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 4 LANGUAGE_2  &lt 8 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 2 ENTER  &lt 1 TAB  &none  &none      &kp BSPC  &kp DEL
-            >;
-        };
-
-        win_macro {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
-&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(TAB)         &kp LA(TAB)       &kp LC(LG(RIGHT))  &trans
-&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
-&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &trans              &trans            &trans             &trans
             >;
         };
     };
