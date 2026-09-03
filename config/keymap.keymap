@@ -155,7 +155,7 @@
         win_macro {
             bindings = <
 &trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
-&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(TAB)         &kp LA(TAB)       &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LA(TAB)         &kp LG(TAB)       &kp LC(LG(RIGHT))  &trans
 &trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
 &trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &trans              &trans            &trans             &trans
             >;
