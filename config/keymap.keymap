@@ -5,6 +5,8 @@
 
 &mt { flavor = "balanced"; };
 
+&lt { flavor = "balanced"; };
+
 / {
     combos {
         compatible = "zmk,combos";
