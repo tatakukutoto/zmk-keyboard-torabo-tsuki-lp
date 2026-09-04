@@ -110,7 +110,7 @@
         base {
             bindings = <
 &kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 8 K    &lt 7 L   &kp MINUS
+&mt LEFT_CONTROL A       &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 8 K    &lt 7 L   &kp MINUS
 &kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
 &mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 4 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BSPC  &kp DEL
             >;
@@ -118,10 +118,10 @@
 
         win_base {
             bindings = <
-&kp Q                    &kp W         &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O     &kp P
-&kp A                    &kp S         &kp D         &kp F             &kp G                                                    &kp H      &kp J  &lt 8 K    &lt 7 L   &kp MINUS
-&kp Z                    &kp X         &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_GUI  &kp LEFT_ALT  &lt 6 LANGUAGE_2  &lt 5 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BSPC  &kp DEL
+&trans  &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans            &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &lt 5 LANGUAGE_1  &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
