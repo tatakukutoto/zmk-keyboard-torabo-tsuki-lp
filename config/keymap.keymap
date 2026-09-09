@@ -147,7 +147,7 @@
             >;
         };
 
-        macro {
+        mac_macro {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
 &trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
@@ -176,10 +176,10 @@
 
         sucroller {
             bindings = <
-&none  &none  &none  &none  &none                    &none  &none  &none             &none  &none
-&none  &none  &none  &none  &none                    &none  &none  &kp LEFT_CONTROL  &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none             &none  &none
-&none  &none  &none  &none  &none  &none      &none  &none  &none  &none             &none  &none
+&none  &none  &none  &none  &none                    &none  &none                  &none          &none  &none
+&none  &none  &none  &none  &none                    &none  &kp LC(LS(SEMICOLON))  &kp LC(MINUS)  &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none                  &none          &none  &none
+&none  &none  &none  &none  &none  &none      &none  &none  &none                  &none          &none  &none
             >;
         };
 
