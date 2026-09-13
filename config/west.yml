@@ -29,5 +29,8 @@ manifest:
       revision: main
     - name: zmk-driver-kscan-4-direction-switch
       remote: sekigon-gonnoc
+    - name: zmk-pointing-acceleration
+      url: https://github.com/oleksandrmaslov/zmk-pointing-acceleration
+      revision: main
   self:
     path: config
