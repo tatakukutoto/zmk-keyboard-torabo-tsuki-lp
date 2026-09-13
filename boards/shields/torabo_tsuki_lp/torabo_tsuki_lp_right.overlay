@@ -11,18 +11,17 @@
     track-remainders;
 
     min-factor = <500>;
-    max-factor = <2500>;
+    max-factor = <2000>;
     speed-threshold = <1200>;
     speed-max = <6000>;
-    acceleration-exponent = <2>;
+    acceleration-exponent = <1>;
 };
 
 &pointing_listener {
     input-processors = <
         &zip_xy_transform
             (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        &pointer_accel
-    >;
+        &pointer_accel>;
     scroller {
         layers = <7>;
 
@@ -30,15 +29,6 @@
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_scroll_scaler 1 10>;
-    };
-
-    precision_mode {
-        layers = <8>;
-
-        input-processors =
-            <&zip_xy_transform
-                (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-            <&zip_xy_scaler 1 4>;
     };
 };
 
