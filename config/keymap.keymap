@@ -35,27 +35,9 @@
             layers = <0 1>;
         };
 
-        c_Ro_jis {
-            bindings = <&kp INT_RO>;
-            key-positions = <31 30>;
-            layers = <0 1>;
-        };
-
-        c_atmk_jis {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <18 19>;
-            layers = <0 1>;
-        };
-
         c_lbrkt_jis {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <24 25>;
-            layers = <0 1>;
-        };
-
-        c_rbrkt_jis {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 27>;
             layers = <0 1>;
         };
 
@@ -74,6 +56,24 @@
         c_yen_jis {
             bindings = <&kp INTERNATIONAL_3>;
             key-positions = <8 9>;
+            layers = <0 1>;
+        };
+
+        c_rbrkt_jis {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <26 27>;
+            layers = <0 1>;
+        };l
+
+        c_Ro_jis {
+            bindings = <&kp INT_RO>;
+            key-positions = <31 30>;
+            layers = <0 1>;
+        };
+
+        c_atmk_jis {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <18 19>;
             layers = <0 1>;
         };
     };
