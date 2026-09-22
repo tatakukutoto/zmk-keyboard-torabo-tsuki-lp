@@ -21,49 +21,60 @@
             bindings = <&mkp LCLK>;
             key-positions = <16 17>;
             layers = <0 1>;
-            timeout-ms = <200>;
         };
 
         c_rclk {
             bindings = <&mkp RCLK>;
             key-positions = <18 17>;
             layers = <0 1>;
-            timeout-ms = <200>;
         };
 
         c_mclk {
             bindings = <&mkp MCLK>;
             key-positions = <16 17 18>;
-            timeout-ms = <200>;
             layers = <0 1>;
         };
 
-        c_Ro {
+        c_Ro_jis {
             bindings = <&kp INT_RO>;
             key-positions = <31 30>;
-            timeout-ms = <200>;
             layers = <0 1>;
         };
 
-        c_sc {
-            bindings = <&mm_semicolon>;
+        c_atmk_jis {
+            bindings = <&kp LEFT_BRACKET>;
             key-positions = <18 19>;
             layers = <0 1>;
-            timeout-ms = <200>;
         };
 
-        c_lbrkt {
+        c_lbrkt_jis {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <24 25>;
             layers = <0 1>;
-            timeout-ms = <200>;
         };
 
-        c_rbrkt {
+        c_rbrkt_jis {
             bindings = <&kp BACKSLASH>;
             key-positions = <26 27>;
             layers = <0 1>;
-            timeout-ms = <200>;
+        };
+
+        c_minus_jis {
+            bindings = <&kp MINUS>;
+            key-positions = <6 7>;
+            layers = <0 1>;
+        };
+
+        c_hat_jis {
+            bindings = <&kp EQUAL>;
+            key-positions = <8 7>;
+            layers = <0 1>;
+        };
+
+        c_yen_jis {
+            bindings = <&kp INTERNATIONAL_3>;
+            key-positions = <8 9>;
+            layers = <0 1>;
         };
     };
 
@@ -136,9 +147,9 @@
     };
 
     behaviors {
-        mm_semicolon: mm_semicolon {
+        kp_semicolon_us: kp_semicolon_us {
             compatible = "zmk,behavior-mod-morph";
-            label = "MM_SEMICOLON";
+            label = "KP_SEMICOLON_US";
             bindings = <&kp SEMICOLON>, <&kp SQT>;
 
             #binding-cells = <0>;
@@ -152,9 +163,9 @@
         mac_base {
             bindings = <
 &kp Q                    &kp W           &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O          &kp P
-&mt LEFT_GUI A           &mt LEFT_GUI S  &kp D         &kp F             &kp G                                                    &kp H      &kp J  &kp K      &lt 7 L        &kp MINUS
+&mt LEFT_GUI A           &mt LEFT_GUI S  &kp D         &kp F             &kp G                                                    &kp H      &kp J  &kp K      &lt 7 L        &kp_semicolon_us
 &kp Z                    &kp X           &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT        &kp FSLH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT    &kp LEFT_GUI  &lt 6 LANGUAGE_2  &lt 4 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BACKSPACE  &kp DELETE
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT    &kp LEFT_GUI  &lt 4 LANGUAGE_2  &lt 5 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BACKSPACE  &kp DELETE
             >;
         };
 
@@ -163,16 +174,16 @@
 &trans       &trans       &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
 &mt LCTRL A  &mt LCTRL S  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
 &trans       &trans       &trans  &trans  &trans            &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &lt 5 LANGUAGE_1  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans       &trans  &trans  &lt 6 LANGUAGE_1  &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         sign {
             bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &none             &none             &kp LEFT_BRACKET  &kp EQUAL      &kp INT_YEN
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &none             &kp LS(N7)        &kp LS(NUMBER_2)  &kp SEMICOLON  &kp SQT
-&kp F11  &kp F12  &none   &none   &none    &none       &none   &kp LS(NUMBER_1)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)     &kp LS(NUMBER_6)
-&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans            &trans            &trans            &trans         &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &none       &kp N7        &kp N8        &kp N9        &none
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none
+&kp F11  &kp F12  &none   &none   &none    &none       &none   &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans      &trans        &trans        &trans        &trans
             >;
         };
 
@@ -182,6 +193,15 @@
 &kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F2
 &trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &trans    &trans        &trans     &trans
 &trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &trans    &trans        &trans     &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -203,15 +223,6 @@
             >;
         };
 
-        bt_sel {
-            bindings = <
-&bt0    &bt1    &bt2    &bt3        &bt4                                &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         sucroller {
             bindings = <
 &none      &none         &none           &none         &none                    &none  &none      &none              &none  &none
@@ -219,6 +230,29 @@
 &none      &none         &none           &none         &none  &none      &none  &none  &none      &none              &none  &none
 &none      &none         &none           &none         &none  &none      &none  &none  &none      &none              &none  &none
             >;
+        };
+
+        setting {
+            bindings = <
+&bt0    &bt1    &bt2    &bt3        &bt4                                &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &bt BT_CLR  &bt BT_CLR_ALL                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans      &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        setting_mac {
+            if-layers = <2 5>;
+            then-layer = <8>;
+        };
+
+        setting_win {
+            if-layers = <2 6>;
+            then-layer = <8>;
         };
     };
 };
