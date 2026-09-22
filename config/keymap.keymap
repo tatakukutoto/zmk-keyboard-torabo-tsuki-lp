@@ -65,15 +65,15 @@
             layers = <0 1>;
         };
 
-        c_Ro_jis {
-            bindings = <&kp INT_RO>;
-            key-positions = <31 30>;
-            layers = <0 1>;
-        };
-
         c_atmk_jis {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <18 19>;
+            layers = <0 1>;
+        };
+
+        c_Ro_jis {
+            bindings = <&kp INT_RO>;
+            key-positions = <31 30>;
             layers = <0 1>;
         };
     };
