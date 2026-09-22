@@ -173,7 +173,7 @@
 &kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &none             &kp LS(N7)        &kp LS(NUMBER_2)  &kp SEMICOLON  &kp SQT
 &kp F11  &kp F12  &none   &none   &none    &none       &none   &kp LS(NUMBER_1)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)     &kp LS(NUMBER_6)
 &trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans            &none             &none             &trans         &trans
-            >;a
+            >;
         };
 
         num {
@@ -190,7 +190,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
 &trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)        &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &none  &none        &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &none  &none        &trans            &trans
             >;
         };
 
