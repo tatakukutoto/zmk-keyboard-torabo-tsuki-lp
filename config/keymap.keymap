@@ -41,6 +41,12 @@
             layers = <0 1>;
         };
 
+        c_rbrkt_jis {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <26 27>;
+            layers = <0 1>;
+        };
+
         c_minus_jis {
             bindings = <&kp MINUS>;
             key-positions = <6 7>;
@@ -56,12 +62,6 @@
         c_yen_jis {
             bindings = <&kp INTERNATIONAL_3>;
             key-positions = <8 9>;
-            layers = <0 1>;
-        };
-
-        c_rbrkt_jis {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <26 27>;
             layers = <0 1>;
         };
 
