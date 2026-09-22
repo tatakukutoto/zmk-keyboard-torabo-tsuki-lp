@@ -63,7 +63,7 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <26 27>;
             layers = <0 1>;
-        };l
+        };
 
         c_Ro_jis {
             bindings = <&kp INT_RO>;
