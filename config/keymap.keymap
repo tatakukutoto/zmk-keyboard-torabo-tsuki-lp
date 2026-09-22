@@ -79,35 +79,18 @@
     };
 
     macros {
-        win_open: win_open {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT &kp DELETE>,
-                <&macro_release>,
-                <&kp LEFT_CONTROL &kp LEFT_ALT &kp DELETE>;
-
-            label = "WIN_OPEN";
-        };
-
-        win_lock: win_lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LEFT_GUI &kp L>,
-                <&macro_release>,
-                <&kp LEFT_GUI &kp L>;
-
-            label = "WIN_LOCK";
-        };
-
         macro_9981: macro_9981 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1>;
+            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp ENTER>;
             label = "MACRO_9981";
+        };
+
+        macro_99819981: macro_99819981 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N9 &kp N9 &kp N8 &kp N1 &kp N9 &kp N9 &kp N8 &kp N1>;
+            label = "MACRO_99819981";
         };
 
         bt0: bt0 {
@@ -155,6 +138,33 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        mm_plus_minus: mm_plus_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_PLUS_MINUS";
+            bindings = <&kp LS(SEMICOLON)>, <&kp MINUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_ast_sla: mm_ast_sla {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_AST_SLA";
+            bindings = <&kp LS(SQT)>, <&kp SLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_period_equal: mm_period_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_PERIOD_EQUAL";
+            bindings = <&kp PERIOD>, <&kp LS(MINUS)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -165,61 +175,61 @@
 &kp Q                    &kp W           &kp E         &kp R             &kp T                                                    &kp Y      &kp U  &kp I      &kp O          &kp P
 &mt LEFT_GUI A           &mt LEFT_GUI S  &kp D         &kp F             &kp G                                                    &kp H      &kp J  &kp K      &lt 7 L        &kp_semicolon_us
 &kp Z                    &kp X           &kp C         &kp V             &kp B             &kp LS(N8)                &kp LS(N9)   &kp N      &kp M  &kp COMMA  &kp DOT        &kp FSLH
-&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT    &kp LEFT_GUI  &lt 4 LANGUAGE_2  &lt 5 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 3 ENTER  &lt 2 TAB  &none  &none      &kp BACKSPACE  &kp DELETE
+&mt LEFT_CONTROL ESCAPE  &kp LEFT_ALT    &kp LEFT_GUI  &lt 4 LANGUAGE_2  &lt 3 LANGUAGE_1  &mt LEFT_SHIFT SPACE      &lt 5 ENTER  &lt 2 TAB  &none  &none      &kp BACKSPACE  &kp DELETE
             >;
         };
 
         win_base {
             bindings = <
-&trans       &trans       &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
-&mt LCTRL A  &mt LCTRL S  &trans  &trans  &trans                                &trans  &trans  &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &trans            &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &lt 6 LANGUAGE_1  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        sign {
-            bindings = <
-&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &none       &kp N7        &kp N8        &kp N9        &none
-&kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none
-&kp F11  &kp F12  &none   &none   &none    &none       &none   &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
-&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans      &trans        &trans        &trans        &trans
+&trans       &trans       &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
+&mt LCTRL A  &mt LCTRL S  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
+&trans       &trans       &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans
+&trans       &trans       &trans  &trans  &trans  &trans      &lt 6 ENTER  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         num {
             bindings = <
-&kp N1             &kp N2     &kp N3       &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8        &kp N9     &kp N0
-&kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F2
-&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &trans    &trans        &trans     &trans
-&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &trans    &trans        &trans     &trans
+&kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &mm_ast_sla       &kp N7        &kp N8        &kp N9        &kp N0
+&kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &mm_plus_minus    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none
+&kp F11  &kp F12  &none   &none   &none    &none       &none   &mm_period_equal  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none
+&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans            &trans        &trans        &trans        &trans
             >;
         };
 
-        layer_8 {
+        sign {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LS(N7)        &kp LS(N8)        &kp LS(N9)        &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &kp LS(N4)        &kp LS(N5)        &kp LS(NUMBER_6)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(N3)        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans            &trans            &trans
+            >;
+        };
+
+        etc {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                      &trans    &trans    &kp F2        &trans     &trans
+&trans  &trans  &trans  &trans  &trans                      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans        &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans    &trans    &trans        &trans     &trans
             >;
         };
 
         mac_macro {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
-&trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)        &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &trans              &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans                           &trans              &trans              &trans            &trans         &trans
+&trans  &trans  &trans  &trans  &trans                           &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &macro_9981  &kp LG(LEFT)        &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans              &trans              &trans            &trans         &trans
             >;
         };
 
         win_macro {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
-&trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(Z)           &kp LG(TAB)       &kp LC(LG(RIGHT))  &trans
-&trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
-&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &trans              &trans            &trans             &trans
+&trans  &trans  &trans  &trans  &trans                               &trans            &trans     &trans       &trans             &trans
+&trans  &trans  &trans  &trans  &trans                               &kp LC(LG(LEFT))  &kp LG(Z)  &kp LG(TAB)  &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &macro_99819981  &kp LA(LC(DEL))   &kp LG(L)  &trans       &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans            &trans     &trans       &trans             &trans
             >;
         };
 
@@ -246,12 +256,12 @@
         compatible = "zmk,conditional-layers";
 
         setting_mac {
-            if-layers = <2 5>;
+            if-layers = <2 3>;
             then-layer = <8>;
         };
 
         setting_win {
-            if-layers = <2 6>;
+            if-layers = <2 3>;
             then-layer = <8>;
         };
     };
