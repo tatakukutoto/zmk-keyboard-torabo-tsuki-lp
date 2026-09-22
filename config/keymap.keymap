@@ -172,7 +172,7 @@
 &kp F1   &kp F2   &kp F3  &kp F4  &kp F5                       &none             &none             &kp LEFT_BRACKET  &kp EQUAL      &kp INT_YEN
 &kp F6   &kp F7   &kp F8  &kp F9  &kp F10                      &none             &kp LS(N7)        &kp LS(NUMBER_2)  &kp SEMICOLON  &kp SQT
 &kp F11  &kp F12  &none   &none   &none    &none       &none   &kp LS(NUMBER_1)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)     &kp LS(NUMBER_6)
-&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans            &none             &none      &trans         &trans
+&trans   &trans   &trans  &trans  &trans   &trans      &trans  &trans            &none             &none             &trans         &trans
             >;a
         };
 
@@ -181,7 +181,7 @@
 &kp N1             &kp N2     &kp N3       &kp N4     &kp N5                             &kp N6    &kp N7    &kp N8        &kp N9     &kp N0
 &kp LS(SEMICOLON)  &kp MINUS  &kp LS(SQT)  &kp SLASH  &kp LS(MINUS)                      &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp F2
 &trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &trans    &trans        &trans     &trans
-&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &none     &none      &trans    &trans
+&trans             &trans     &trans       &trans     &trans         &trans      &trans  &trans    &none     &none         &trans    &trans
             >;
         };
 
@@ -190,7 +190,7 @@
 &trans  &trans  &trans  &trans  &trans                      &trans              &trans              &trans            &trans         &trans
 &trans  &trans  &trans  &trans  &trans                      &kp LC(LEFT_ARROW)  &kp LC(DOWN)        &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp LG(LEFT)        &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &none  &none      &trans              &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans              &none  &none        &trans            &trans         &trans
             >;
         };
 
@@ -199,7 +199,7 @@
 &trans  &trans  &trans  &trans     &trans                              &trans              &trans              &trans            &trans             &trans
 &trans  &trans  &trans  &trans     &trans                              &kp LC(LG(LEFT))    &kp LG(Z)           &kp LG(TAB)       &kp LC(LG(RIGHT))  &trans
 &trans  &trans  &trans  &win_lock  &win_open  &macro_9981      &trans  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(UP_ARROW)  &kp LG(RIGHT)      &trans
-&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &none               &none      &trans              &trans
+&trans  &trans  &trans  &trans     &trans     &trans           &trans  &trans              &none               &trans            &trans             &trans
             >;
         };
 
@@ -217,7 +217,7 @@
 &none      &none         &none           &none         &none                    &none  &none      &none              &none  &none
 &kp LCTRL  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LEFT_GUI  &none                    &none  &kp MINUS  &kp LS(SEMICOLON)  &none  &none
 &none      &none         &none           &none         &none  &none      &none  &none  &none      &none              &none  &none
-&none      &none         &none           &none         &none  &none      &none  &none  &trans  &trans &none      &none
+&none      &none         &none           &none         &none  &none      &none  &none  &none      &none              &none  &none
             >;
         };
     };
