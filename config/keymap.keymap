@@ -167,15 +167,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-
-        mm_plus_ast: mm_plus_ast {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MM_PLUS_AST";
-            bindings = <&kp LS(SEMICOLON)>, <&kp LS(SQT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
     };
 
     keymap {
@@ -192,10 +183,10 @@
 
         win_base {
             bindings = <
-&trans       &trans       &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
-&mt LCTRL A  &mt LCTRL S  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans
-&trans       &trans       &trans  &trans  &trans  &trans      &lt 6 ENTER  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &lt 6 ENTER  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
