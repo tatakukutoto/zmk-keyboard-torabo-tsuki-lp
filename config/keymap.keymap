@@ -219,19 +219,19 @@
 
         mac_macro {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                           &trans          &trans              &kp F2            &trans         &trans
-&trans  &trans  &trans  &trans  &trans                           &kp LEFT_ARROW  &kp DOWN            &kp UP_ARROW      &kp RIGHT      &trans
-&trans  &trans  &trans  &trans  &trans  &trans           &trans  &kp LC(LEFT)    &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
-&trans  &trans  &trans  &trans  &trans  &macro_9981      &trans  &trans          &trans              &trans            &trans         &trans
+&trans  &trans  &trans  &trans         &trans                           &trans          &trans              &kp F2            &trans         &trans
+&trans  &trans  &trans  &trans         &trans                           &kp LEFT_ARROW  &kp DOWN            &kp UP_ARROW      &kp RIGHT      &trans
+&trans  &trans  &trans  &trans         &trans  &trans           &trans  &kp LC(LEFT)    &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
+&trans  &trans  &trans  &kp LC(LG(Q))  &trans  &macro_9981      &trans  &trans          &trans              &trans            &trans         &trans
             >;
         };
 
         win_macro {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                           &trans            &trans     &kp F2        &trans             &trans
-&trans  &trans  &trans  &trans  &trans                                           &kp LEFT          &kp DOWN   &kp UP_ARROW  &kp RIGHT          &trans
-&trans  &trans  &trans  &trans  &trans              &trans               &trans  &kp LA(LG(LEFT))  &kp LG(Z)  &kp LG(TAB)   &kp LC(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &kp LC(LA(DELETE))  &macro_99819981      &trans  &trans            &trans     &trans        &trans             &trans
+&trans  &trans  &trans  &trans     &trans                                           &trans            &trans     &kp F2        &trans             &trans
+&trans  &trans  &trans  &trans     &trans                                           &kp LEFT          &kp DOWN   &kp UP_ARROW  &kp RIGHT          &trans
+&trans  &trans  &trans  &trans     &trans              &trans               &trans  &kp LG(LC(LEFT))  &kp LG(Z)  &kp LG(TAB)   &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &kp LG(L)  &kp LC(LA(DELETE))  &macro_99819981      &trans  &trans            &trans     &trans        &trans             &trans
             >;
         };
 
@@ -257,12 +257,7 @@
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
-        setting_mac {
-            if-layers = <2 3>;
-            then-layer = <8>;
-        };
-
-        setting_win {
+        setting {
             if-layers = <2 3>;
             then-layer = <8>;
         };
