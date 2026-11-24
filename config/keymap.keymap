@@ -80,7 +80,7 @@
         };
 
         c_num_plus {
-            bindings = <&kp PLUS>;
+            bindings = <&kp LS(SEMICOLON)>;
             key-positions = <16 17>;
             layers = <2>;
         };
@@ -92,7 +92,7 @@
         };
 
         c_num_astrk {
-            bindings = <&kp ASTRK>;
+            bindings = <&kp LS(SQT)>;
             key-positions = <6 7>;
             layers = <2>;
         };
@@ -104,7 +104,7 @@
         };
 
         c_num_equal {
-            bindings = <&kp EQUAL>;
+            bindings = <&kp LS(MINUS)>;
             key-positions = <28 29>;
             layers = <2>;
         };
