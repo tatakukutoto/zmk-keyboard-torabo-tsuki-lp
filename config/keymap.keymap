@@ -105,14 +105,26 @@
 
         c_num_equal {
             bindings = <&kp LS(MINUS)>;
-            key-positions = <28 29>;
+            key-positions = <29 30>;
             layers = <2>;
         };
 
         c_num_priod {
             bindings = <&kp PERIOD>;
-            key-positions = <29 30>;
+            key-positions = <29 28>;
             layers = <2>;
+        };
+
+        c_mssionctrl {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <12 13>;
+            layers = <5>;
+        };
+
+        c_taskview {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <12 13>;
+            layers = <6>;
         };
     };
 
@@ -228,19 +240,19 @@
 
         mac_macro {
             bindings = <
-&trans  &trans  &trans  &trans         &trans                           &trans          &trans              &kp F2            &trans         &trans
-&trans  &trans  &trans  &trans         &trans                           &kp LEFT_ARROW  &kp DOWN            &kp UP_ARROW      &kp RIGHT      &trans
-&trans  &trans  &trans  &trans         &trans  &trans           &trans  &kp LC(LEFT)    &kp LC(DOWN_ARROW)  &kp LC(UP_ARROW)  &kp LC(RIGHT)  &trans
-&trans  &trans  &trans  &kp LC(LG(Q))  &trans  &macro_9981      &trans  &trans          &trans              &trans            &trans         &trans
+&trans  &trans  &trans        &trans         &trans                           &trans          &trans    &kp F2        &trans     &trans
+&trans  &trans  &kp LC(LEFT)  &kp LC(RIGHT)  &trans                           &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans        &trans         &trans  &trans           &trans  &trans          &trans    &trans        &trans     &trans
+&trans  &trans  &trans        &kp LC(LG(Q))  &trans  &macro_9981      &trans  &trans          &trans    &trans        &trans     &trans
             >;
         };
 
         win_macro {
             bindings = <
-&trans  &trans  &trans  &trans     &trans                                           &trans            &trans     &kp F2        &trans             &trans
-&trans  &trans  &trans  &trans     &trans                                           &kp LEFT          &kp DOWN   &kp UP_ARROW  &kp RIGHT          &trans
-&trans  &trans  &trans  &trans     &trans              &trans               &trans  &kp LG(LC(LEFT))  &kp LG(Z)  &kp LG(TAB)   &kp LC(LG(RIGHT))  &trans
-&trans  &trans  &trans  &kp LG(L)  &kp LC(LA(DELETE))  &macro_99819981      &trans  &trans            &trans     &trans        &trans             &trans
+&trans  &trans  &trans            &trans             &trans                                           &trans    &trans    &kp F2        &trans     &trans
+&trans  &trans  &kp LG(LC(LEFT))  &kp LC(LG(RIGHT))  &trans                                           &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &trans  &trans            &trans             &trans              &trans               &trans  &trans    &trans    &trans        &trans     &trans
+&trans  &trans  &trans            &kp LG(L)          &kp LC(LA(DELETE))  &macro_99819981      &trans  &trans    &trans    &trans        &trans     &trans
             >;
         };
 
