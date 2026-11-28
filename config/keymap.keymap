@@ -117,13 +117,13 @@
 
         c_mssionctrl {
             bindings = <&kp LC(UP_ARROW)>;
-            key-positions = <12 13>;
+            key-positions = <17 16>;
             layers = <5>;
         };
 
         c_taskview {
             bindings = <&kp LG(TAB)>;
-            key-positions = <12 13>;
+            key-positions = <16 17>;
             layers = <6>;
         };
     };
